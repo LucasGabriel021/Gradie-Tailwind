@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,52 @@
      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
      <script src="https://cdn.tailwindcss.com"></script>
      <link rel="stylesheet" href="assets/css/style.css">
+     <script>
+          tailwind.config = {
+               theme: {
+                    extend: {
+                         colors: {
+                              'verdeEscuro': '#013243'
+                         },
+                         fontFamily: {
+                              roboto: ['Roboto', 'sans-serif']
+                         }
+                    }
+               }
+          }
+     </script>
 </head>
 <body>
-     
+     <main>
+          <section>
+               <div class="bg-verdeEscuro px-10 pt-10">
+                    <div>
+                         <h1 class="font-roboto font-bold text-white text-2xl text-center">Gradie</h1>
+                         <span class="font-roboto block text-slate-500 text-center mt-2">Beatiful gradients in seconds</span>
+                    </div>
+                    <div>
+                         <img src="assets/images/mockupCelular.png" alt="Mockup Iphone" class="w-full h-auto">
+                    </div>
+               </div>
+               <div class="bg-white p-10">
+                    <h2 class="font-bold text-xl mb-4">Login</h2>
+                    <form action="#">
+                         <div class="flex flex-col gap-y-2">
+                              <label for="emailUser" class="font-bold font-roboto text-md">Email</label>
+                              <input type="email" name="emailUser" id="emailUser" placeholder="john@example.com" required class="border border-slate-300 p-2 w-full">
+                         </div>
+                         <div class="mt-3 flex flex-col gap-y-2">
+                              <label for="passwordUser" class="font-bold font-roboto text-md">Password</label>
+                              <input type="password" name="passwordUser" id="passwordUser" placeholder="At least 8 characters" required class="border border-slate-300 p-2 w-full">
+                         </div>
+                         <div class="mt-3 flex items-start justify-center gap-x-2">
+                              <input type="checkbox" name="sendEmails" id="sendEmails">
+                              <p class="font-roboto">By creating an account, you agree to the <span class="font-roboto font-bold text-verdeEscuro underline underline-offset-4 tracking-wider">Terms & Conditions</span>.</p>
+                         </div>
+                         <button type="submit" class="mt-3 p-3 bg-verdeEscuro w-full text-white rounded-md font-roboto font-bold cursor-pointer">Create an Account</button>
+                    </form>
+               </div>
+          </section>
+     </main>
 </body>
 </html>
