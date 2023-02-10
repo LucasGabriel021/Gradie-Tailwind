@@ -10,13 +10,19 @@ btnSubmit.addEventListener('click', (e) => {
      const email = e.target.form[0].value;
      const senha = e.target.form[1].value;
 
-     const user = {
-          email: email,
-          senha: senha
-     }
+     if(email === '' && senha === '') {
+          alert('Preencha o formulário!');
+     } else {
+          const user = {
+               email: email,
+               senha: senha
+          }
 
-     salvarDados(user);
-     limparCampos();
+          salvarDados(user);
+          limparCampos();
+
+          alert('Formulário preenchido com sucesso!');
+     }
 });
 
 function salvarDados(user) {
@@ -27,4 +33,8 @@ function salvarDados(user) {
 function limparCampos() {
      document.getElementById('emailUser').value = '';
      document.getElementById('passwordUser').value = '';
+}
+
+function valida() {
+
 }
